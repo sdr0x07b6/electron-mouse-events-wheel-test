@@ -22,6 +22,8 @@ When the application is launched, two identical windows will appear.
 Line up these two windows, focus on one of them, place the mouse cursor within the document area of each window, and rotate the mouse wheel.  
 Compare the mouse events output to the console (the unfocused window will output nothing).
 
+https://github.com/user-attachments/assets/3fa59bcb-612d-467e-b1c5-79ce49b9a9b3
+
 ## My environment
 
 - Electron v34.0.0
