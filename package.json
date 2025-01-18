@@ -1,0 +1,12 @@
+{
+  "name": "electron-mouse-events-test",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron ."
+  },
+  "devDependencies": {
+    "electron": "34.0.0"
+  }
+}
