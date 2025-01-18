@@ -1,14 +1,14 @@
-# electron-mouse-events-test
+# electron-mouse-events-wheel-test
 
-A minimalist Electron application for checking mouse events that occur when you move the mouse cursor over or off a window.
+This is a minimal application that observes wheel event generation in a frameless window using `electron-drag-click`.
 
 ## What to check?
 
-When the mouse cursor moves over or off a focused window, it works normally.
+Create a frameless window with an application that implements `electron-drag-click`.
+Set `-webkit-app-region: drag;` for the content area.
 
-However, when you move the mouse cursor over an unfocused window, `mouseleave` and `mouseout` occur immediately after `mouseenter` and `mouseover`. And when you move the mouse cursor off, `mouseleave` and `mouseout` do not occur.
-
-`mouseleave` `mouseout` The timing of these should be the same whether the window has focus or not.
+No problem on the focused window.
+If you rotate the mouse wheel on an unfocused window, the `wheel` event will not be fired.
 
 ## Startup
 
@@ -18,19 +18,12 @@ yarn && yarn dev
 
 ## How to check
 
-When you start the application, two identical windows will be displayed.  
-Place them side by side, focus one of the windows, and move the mouse cursor over and off the document area of ​​each window.  
-Compare the mouse events output to the Console.
+When the application is launched, two identical windows will appear.  
+Line up these two windows, focus on one of them, place the mouse cursor within the document area of each window, and rotate the mouse wheel.  
+Compare the mouse events output to the console (the unfocused window will output nothing).
 
-https://github.com/user-attachments/assets/97af2c5a-f66b-4ccc-9ae5-7ec5ee0df127
-
-## Related information
-
-### My environment
+## My environment
 
 - Electron v34.0.0
+- electron-drag-click v1.0.6
 - macOS 15.2 arm64
-
-### Related Issue
-
-https://github.com/electron/electron/issues/45246

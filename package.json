@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "electron": "34.0.0"
+  },
+  "dependencies": {
+    "electron-drag-click": "1.0.6"
   }
 }
